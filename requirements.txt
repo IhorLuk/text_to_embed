@@ -1,0 +1,7 @@
+openai
+sqlalchemy
+python-dotenv
+langchain
+clean-text
+pgvector
+psycopg2-binary

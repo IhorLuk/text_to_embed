@@ -1,0 +1,6 @@
+/.env
+/__pycache__
+/database_connection.py
+/main.py
+/text_preprocessing.py
+/venv
