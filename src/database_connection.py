@@ -6,13 +6,21 @@ from pgvector.sqlalchemy import Vector
 # define base for openAI table
 Base = declarative_base()
 
-# table for embeddings
+# table for OPENAI embeddings
 class DocumentOpenai(Base):
     __tablename__ = "test_vectors_openai"
     __table_args__ = {'schema':'test_vectors'}
 
     id = Column(VARCHAR, primary_key=True)
     embedding = Column(Vector(1536))
+
+# table for PALM embeddings
+class DocumentPalm(Base):
+    __tablename__ = "test_vectors_palm"
+    __table_args__ = {'schema':'test_vectors'}
+
+    id = Column(VARCHAR, primary_key=True)
+    embedding = Column(Vector(768))
 
 # table for text of the comments
 class DocumentComments(Base):
@@ -22,13 +30,13 @@ class DocumentComments(Base):
     id = Column(VARCHAR, primary_key=True)
     comment_text = Column(Text)
 
+# Test embty table
 class TestEmpty(Base):
     __tablename__ = 'test_input'
     __table_args__ = {'schema':'test_vectors'}
 
     id = Column(VARCHAR, primary_key=True)
     transformed_text = Column(Text)
-
 
 # define session - it is the main class to query table
 class Session():
