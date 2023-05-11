@@ -1,0 +1,1 @@
+# Get data from database, use OpenAI key to create embeddings for it and transfer to another database
