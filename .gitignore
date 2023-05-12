@@ -4,3 +4,7 @@
 /main.py
 /text_preprocessing.py
 /venv
+all_comments.pkl
+test_multilingual.pkl
+src/test.ipynb
+.gitignore

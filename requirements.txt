@@ -5,3 +5,4 @@ langchain
 clean-text
 pgvector
 psycopg2-binary
+google-cloud-aiplatform
